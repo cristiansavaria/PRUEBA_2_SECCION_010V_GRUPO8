@@ -68,37 +68,10 @@ function generar_galeria_imagenes(
     });
 }
 
-function btnAction(identificadorImagen) {
-
-    console.log("mostrar spiner para reflejar la ejecución de la llamada ajax de fondo");
-    $("#ajax-loader-img-"+identificadorImagen).show();
-
-    $.get(getBtnActionURL(), function(response){
-        
-        //iterar por el único elemento que debería devolver la respuesta
-        $.each(response, function(index, element){
-            //crear imagen para precargar antes de reemplazar por la existente
-            var newImagen = new Image();
-            newImagen.src = element.url;
-
-            //cuando la imagen ya se encuentra descargada
-            newImagen.onload = function() {
-
-                $("#imagen-"+identificadorImagen).fadeOut(1000, function(){
-                    // se reemplaza la seleccionada, una vez que ya se ha desvanecido, por la nueva ya descargada 
-                    $("#imagen-"+identificadorImagen).attr("src",element.url);
-                                    
-                    // se oculta el spiner
-                    $("#ajax-loader-img-"+identificadorImagen).hide();
-
-                    // se vuelve a mostrar, pero con la nueva imagen
-                    $("#imagen-"+identificadorImagen).fadeIn(2000);
-                });
-                
-            };               
-        });
-    });
+function btnAction(){
+    $('#modalimg').modal('show')
 }
+
 
 function actualizarBarraProgreso(porcentaje) {
     $("#barra-progreso").css("width", porcentaje+"%");
