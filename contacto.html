@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>ONG Ayuda a un peludo</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/validaciones.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/formulario-contacto.js"></script>
+                                                                                                  
+    </head>
+    <body>
+        <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
+            <header class="jumbotron">
+                <h1 class="text-center">
+                    <img src="img/logo.png" class="rounded-circle" alt="logo"/>
+                    <span class="text-nowrap">ONG Ayuda a un Peludo</span>
+                </h1>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
+                </p>
+            </header>
+            
+            <nav class="navbar navbar-expand-md bg-light">
+                
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" class="rounded-circle" alt="Logo" />
+                </a>
+
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Mascotas
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="seccion-perros.html">Perros</a>
+                            <a class="dropdown-item" href="seccion-gatos.html">Gatos</a>
+                        </div>
+                        </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main class="flex-fill">
+                <section>
+                    <h2>Contacto</h2>
+                    <div class="form-group">
+                        <form id="formulario-contacto" name="formularioContacto" action="formulario-enviado.html" method="POST" >
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="fieldTipoContacto">
+                                            Tipo:<span class="alert alert-danger" role="alert"></span>
+                                    </label>
+                                    <select id="fieldTipoContacto" name="tipoContacto" class="form-control">
+                                        <option value="" >-- seleccione un tipo --</option>
+                                        <option value="felicitaciones">Felicitaciones</option>
+                                        <option value="sugerencia">Sugerencia</option>
+                                        <option value="reclamo">Reclamo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="fieldNombre">
+                                            Nombre:<span class="alert alert-danger" role="alert"></span> 
+                                    </label>                       
+                                    <input id="fieldNombre" class="form-control" type="text" name="nombre" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="fieldEmail">
+                                            Email:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <input id="fieldEmail" class="form-control" type="email" name="email" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="fieldFechaNacimiento">
+                                            Fecha Nacimiento:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <input id="fieldFechaNacimiento" class="form-control" type="date" name="fecha_nacimiento" />
+                                </div>                            
+                                <div class="col-md-6">
+                                    <label for="fieldRut">
+                                            Rut:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <input id="fieldRut" class="form-control" type="text" name="rut" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="fieldComentario">
+                                            Comentario:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <textarea id="fieldComentario" class="form-control" name="comentario"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn btn-success" name="submit">Enviar</button>
+                                    <button type="reset" class="btn btn-info" name="reset">Limpiar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>      
+            </main>
+            <footer>
+                <div class="row bg-dark">
+                    <div class="col-12 text-center text-warning">
+                            Programación Web<br/>
+                            Instituto Profesional Duoc UC
+                    </div>
+                </div>
+            </footer>      
+        </div>
+    </body>
+</html>
