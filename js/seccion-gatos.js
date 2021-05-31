@@ -6,7 +6,7 @@ $(document).ready(function() {
     var selectorTablaHTML = "#lista-gatos"
     var url = "https://api.thecatapi.com/v1/images/search?limit="+nroTotalImagenes
 
-    generar_galeria_imagenes(selectorTablaHTML, nroTotalImagenes, nroColumnasPorFila, url,"Cambiar Imagen");
+    generar_galeria_imagenes(selectorTablaHTML, nroTotalImagenes, nroColumnasPorFila, url,"Ver Detalle");
 });
 
 function getBtnActionURL() {
