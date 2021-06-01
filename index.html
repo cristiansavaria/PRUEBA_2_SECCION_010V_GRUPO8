@@ -7,9 +7,13 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/validaciones.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="vendor/jquery/dist/jquery.min.js"></script>
+        <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="js/validacion-inicio-sesion.js"></script>
     </head>
     <body>
         <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
@@ -45,14 +49,14 @@
                                 
                                 <!-- validar -->
                                 
-                                <form action="/action_page.php">
-                                  <div class="form-group">
-                                    <label for="usr">Nombre:</label>
-                                    <input type="text" class="form-control" id="usr" name="username">
+                                <form action="/action_page.php" id= "formulario" name="formulario">
+                                  <div class="form-group" >
+                                    <label for="username">Nombre:</label>
+                                    <input type="text" class="form-control" id="username" name="username">
                                   </div>
                                   <div class="form-group">
-                                    <label for="pwd">Contraseña:</label>
-                                    <input type="password" class="form-control" id="pwd" name="password">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" class="form-control" id="password" name="password">
                                   </div>
                                   <button type="submit" class="btn btn-primary">Enviar</button>
                                 </form>
