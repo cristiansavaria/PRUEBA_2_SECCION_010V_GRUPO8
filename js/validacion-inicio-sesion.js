@@ -1,4 +1,4 @@
-jQuery(document).ready(function validar(){
+jQuery(document).ready(function(){
 
     $("#username").blur(function(){
         valorIngresado = $("this").val();
