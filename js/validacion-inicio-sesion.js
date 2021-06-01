@@ -1,4 +1,4 @@
-jQuery(document).ready(function(){
+jQuery(document).ready(function validar(){
 
     $("#username").blur(function(){
         valorIngresado = $("this").val();
@@ -16,15 +16,15 @@ jQuery(document).ready(function(){
     
         if (valorIngresado.trim().length > 8){
             $(this).addClass("error-campo-formulario");
-            alert("El nombre de usuario debe tener mas de 8 caracteres y NO debe contener espacios en blanco"); //valido que tenga +8 caract
-    
-        if (espacios) { 
+            alert("El nombre de usuario debe tener mas de 8 caracteres y NO debe contener espacios en blanco")
+            return false; //valido que tenga +8 caract
+        }
+        else if (espacios) { 
             alert ("El nombre de usuario no puede contener espacios en blanco"); 
             return false; 
         }
-        else {
+        else{
             $(this).removeClass("error-campo-formulario");
-        }
         }
     });
     
@@ -43,6 +43,7 @@ jQuery(document).ready(function(){
         else {
             $(this).addClass("error-campo-formulario");
             alert("La contrasenia debe contener numeros y letras");
+            return false;
         }
     });// valido  que la contrasenia tenga numeros y letras
 
