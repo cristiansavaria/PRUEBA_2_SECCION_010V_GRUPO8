@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    var nroTotalImagenes = 0;
+    var nroTotalImagenes = 4;
     var nroColumnasPorFila = 3;
     var selectorTablaHTML = "#lista-gatos"
     var url = "https://api.thecatapi.com/v1/images/search?limit="+nroTotalImagenes
